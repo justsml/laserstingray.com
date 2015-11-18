@@ -1,3 +1,5 @@
+/// <reference path="typings/node/node.d.ts" />
+/// <reference path="typings/express.d.ts" />
 var config;
 var express = require('express');
 var app = express();
@@ -42,6 +44,7 @@ if(app.get('env') == 'production') {
     name: config.sessionId,
     secret: config.secret,
   }));
+  console.log(__dirname)
   app.use(morgan());
 }
 
