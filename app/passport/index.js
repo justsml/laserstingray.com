@@ -14,11 +14,11 @@ passport.use(new LocalStrategy(
   function(username, password, done) {
     username = username.trim();
     var userRegex = new RegExp(username, 'i');
-
+    
     User.findOne({username: userRegex}, function(err, user) {
       if (err) return done(new Error(err));
       if (!user) return done(null, false, {message: 'bad username/password combo'});
-
+      
       user.comparePassword(password, function(err, matched) {
         if (err) return done(new Error(err));
         if (matched) {

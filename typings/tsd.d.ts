@@ -17,3 +17,4 @@
 /// <reference path="passport-strategy/passport-strategy.d.ts" />
 /// <reference path="passport-twitter/passport-twitter.d.ts" />
 /// <reference path="passport/passport.d.ts" />
+/// <reference path="mongoose/mongoose.d.ts" />
